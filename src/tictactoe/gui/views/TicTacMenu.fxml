@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="pane" prefHeight="500.0" prefWidth="400.0" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.gui.controller.TicTacMenuController">
+<AnchorPane id="pain" prefHeight="500.0" prefWidth="400.0" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.gui.controller.TicTacMenuController">
    <children>
       <Label fx:id="name" layoutX="84.0" layoutY="34.0" text="TicTacToe">
          <font>
