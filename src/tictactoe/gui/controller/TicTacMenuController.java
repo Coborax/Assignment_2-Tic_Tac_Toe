@@ -14,7 +14,7 @@ public class TicTacMenuController
     public Button play;
 
     public void openGame(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("TicTacView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/TicTacView.fxml"));
         Stage window = (Stage) play.getScene().getWindow();
         window.setScene(new Scene(root));
     }
