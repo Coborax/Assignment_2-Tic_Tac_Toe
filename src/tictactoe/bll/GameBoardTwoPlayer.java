@@ -9,6 +9,8 @@ public class GameBoardTwoPlayer implements IGameModel {
     private int currentPlayer = 0;
     private int winner = -1;
 
+    private boolean gameOver = false;
+
     private int[][] fields = {
             {-1, -1, -1},
             {-1, -1, -1},
@@ -42,7 +44,7 @@ public class GameBoardTwoPlayer implements IGameModel {
     @Override
     public boolean play(int col, int row) {
         // Check if the field is not occupied
-        if(fields[col][row] == -1) {
+        if(fields[col][row] == -1 && isGameOver() != true) {
             // Set the selected row to be owned by the current player
             fields[col][row] = currentPlayer;
 
