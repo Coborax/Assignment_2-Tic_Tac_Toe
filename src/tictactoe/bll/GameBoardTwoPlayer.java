@@ -8,6 +8,12 @@ public class GameBoardTwoPlayer implements IGameModel {
 
     private int currentPlayer = 0;
 
+    private int[][] fields = {
+            {-1, -1, -1},
+            {-1, -1, -1},
+            {-1, -1, -1}
+    };
+
     protected GameBoardTwoPlayer() {
 
     }
@@ -45,8 +51,25 @@ public class GameBoardTwoPlayer implements IGameModel {
     @Override
     public boolean play(int col, int row) {
         //TODO Implement this method
-        currentPlayer = currentPlayer == 0 ? 1 : 0;
-        return true;
+
+        // Check if the field is not occupied
+        if(fields[col][row] == -1) {
+            // Set the selected row to be owned by the current player
+            fields[col][row] = currentPlayer;
+
+            //Switch current player
+            if (currentPlayer == 0) {
+                currentPlayer = 1;
+            } else {
+                currentPlayer = 0;
+            }
+
+            // Return true because the move is allowed
+            return true;
+        }
+
+        // We return false if the selected row and column is occupied
+        return false;
     }
 
     /**
