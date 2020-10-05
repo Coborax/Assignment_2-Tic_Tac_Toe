@@ -19,6 +19,15 @@ public class GameBoardTwoPlayer implements IGameModel {
     public int getNextPlayer() {
         //TODO Implement this method
         return 0;
+
+        //If player 0 click button = true
+        //return player 1
+        //else if player 0 click button = false
+        //return player 0
+        //If player 1 click button = true
+        //return player 0
+        //else if player 1 click button = false
+        //return player 1
     }
 
     /**
