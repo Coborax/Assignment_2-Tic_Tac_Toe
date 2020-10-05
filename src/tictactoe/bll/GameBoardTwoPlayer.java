@@ -26,17 +26,7 @@ public class GameBoardTwoPlayer implements IGameModel {
      */
     @Override
     public int getNextPlayer() {
-        //TODO Implement this method
         return currentPlayer;
-
-        //If player 0 click button = true
-        //return player 1
-        //else if player 0 click button = false
-        //return player 0
-        //If player 1 click button = true
-        //return player 0
-        //else if player 1 click button = false
-        //return player 1
     }
 
     /**
@@ -51,8 +41,6 @@ public class GameBoardTwoPlayer implements IGameModel {
      */
     @Override
     public boolean play(int col, int row) {
-        //TODO Implement this method
-
         // Check if the field is not occupied
         if(fields[col][row] == -1) {
             // Set the selected row to be owned by the current player
@@ -81,8 +69,6 @@ public class GameBoardTwoPlayer implements IGameModel {
      */
     @Override
     public boolean isGameOver() {
-        //TODO Implement this method
-
         //Horizontal
         for (int i = 0; i < fields.length; i++) {
             if (fields[i][0] == 0 && fields[i][1] == 0 && fields[i][2] == 0) {
@@ -142,7 +128,6 @@ public class GameBoardTwoPlayer implements IGameModel {
      */
     @Override
     public int getWinner() {
-        //TODO Implement this method
         return winner;
     }
 
