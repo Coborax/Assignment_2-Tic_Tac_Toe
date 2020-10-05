@@ -7,6 +7,7 @@ package tictactoe.bll;
 public class GameBoardTwoPlayer implements IGameModel {
 
     private int currentPlayer = 0;
+    private int winner = -1;
 
     private int[][] fields = {
             {-1, -1, -1},
@@ -64,7 +65,7 @@ public class GameBoardTwoPlayer implements IGameModel {
                 currentPlayer = 0;
             }
 
-            // Return true because the move is allowed
+            // Return true because the move was allowed
             return true;
         }
 
@@ -81,6 +82,47 @@ public class GameBoardTwoPlayer implements IGameModel {
     @Override
     public boolean isGameOver() {
         //TODO Implement this method
+
+        //Horizontal
+        for (int i = 0; i < fields.length; i++) {
+            if (fields[i][0] == 0 && fields[i][1] == 0 && fields[i][2] == 0) {
+                winner = 0;
+                return true;
+            } else if (fields[i][0] == 1 && fields[i][1] == 1 && fields[i][2] == 1) {
+                winner = 1;
+                return true;
+            }
+        }
+
+        //Vertical
+        for (int i = 0; i < fields.length; i++) {
+            if (fields[0][i] == 0 && fields[1][i] == 0 && fields[2][i] == 0) {
+                winner = 0;
+                return true;
+            } else if (fields[0][i] == 1 && fields[1][i] == 1  && fields[2][i] == 1) {
+                winner = 1;
+                return true;
+            }
+        }
+
+        //Diagonal
+        if (fields[0][0] == 0 && fields[1][1] == 0 && fields[2][2] == 0) {
+            winner = 0;
+            return true;
+        } else if (fields[2][0] == 0 && fields[1][1] == 0 && fields[0][2] == 0) {
+            winner = 0;
+            return true;
+        }
+
+        //Diagonal
+        if (fields[0][0] == 1 && fields[1][1] == 1 && fields[2][2] == 1) {
+            winner = 1;
+            return true;
+        } else if (fields[2][0] == 1 && fields[1][1] == 1 && fields[0][2] == 1) {
+            winner = 1;
+            return true;
+        }
+
         return false;
     }
 
@@ -92,7 +134,7 @@ public class GameBoardTwoPlayer implements IGameModel {
     @Override
     public int getWinner() {
         //TODO Implement this method
-        return -1;
+        return winner;
     }
 
     /**
@@ -100,7 +142,13 @@ public class GameBoardTwoPlayer implements IGameModel {
      */
     @Override
     public void newGame() {
-        //TODO Implement this method
+        currentPlayer = 0;
+        winner = -1;
+        for (int i = 0; i <= fields.length - 1; i++) {
+            for (int j = 0; j <= fields[i].length - 1; i++) {
+                fields[i][j] = -1;
+            }
+        }
     }
 
 }
