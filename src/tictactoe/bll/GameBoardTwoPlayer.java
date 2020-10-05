@@ -123,7 +123,16 @@ public class GameBoardTwoPlayer implements IGameModel {
             return true;
         }
 
-        return false;
+        for (int i = 0; i < fields.length; i++) {
+            for (int j = 0; j < fields[i].length; j++) {
+                if (fields[i][j] == -1) {
+                    winner = -1;
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -144,8 +153,8 @@ public class GameBoardTwoPlayer implements IGameModel {
     public void newGame() {
         currentPlayer = 0;
         winner = -1;
-        for (int i = 0; i <= fields.length - 1; i++) {
-            for (int j = 0; j <= fields[i].length - 1; i++) {
+        for (int i = 0; i < fields.length; i++) {
+            for (int j = 0; j < fields[i].length; j++) {
                 fields[i][j] = -1;
             }
         }
