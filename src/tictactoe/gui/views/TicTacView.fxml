@@ -27,10 +27,6 @@
                <font>
                   <Font size="40.0" />
                </font></Button>
-            <Button fx:id="btn3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" GridPane.columnIndex="2">
-               <font>
-                  <Font size="40.0" />
-               </font></Button>
             <Button fx:id="btn4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" GridPane.rowIndex="1">
                <font>
                   <Font size="40.0" />
@@ -52,6 +48,10 @@
                   <Font size="40.0" />
                </font></Button>
             <Button fx:id="btn9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="40.0" />
+               </font></Button>
+            <Button fx:id="btn3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" GridPane.columnIndex="2">
                <font>
                   <Font size="40.0" />
                </font></Button>
@@ -94,7 +94,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <ListView fx:id="lstScores" prefWidth="200.0" />
+            <ListView fx:id="lstScores" prefWidth="95.0" />
          </children>
          <opaqueInsets>
             <Insets />
