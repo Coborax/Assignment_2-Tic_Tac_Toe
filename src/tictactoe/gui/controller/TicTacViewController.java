@@ -7,17 +7,22 @@ package tictactoe.gui.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import tictactoe.bll.GameBoardFactory;
 import tictactoe.bll.IGameModel;
 import tictactoe.gui.model.ScoreModel;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,6 +30,7 @@ import java.util.ResourceBundle;
  * @author Stegger
  */
 public class TicTacViewController implements Initializable {
+    public Button backButton;
     @FXML
     private ChoiceBox<GameBoardFactory.GAME_MODE> choicePlayMode;
 
@@ -147,4 +153,9 @@ public class TicTacViewController implements Initializable {
         }
     }
 
+    public void takesYouBack(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../views/TicTacMenu.fxml"));
+        Stage window = (Stage) backButton.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
 }

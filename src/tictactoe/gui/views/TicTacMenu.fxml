@@ -17,5 +17,15 @@
             <Font size="36.0" />
          </font>
       </Button>
+      <Label layoutX="130.0" layoutY="243.0" text="How to Play">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="277.0" text="You click on a button and it will place a X or an O." />
+      <Label layoutX="41.0" layoutY="309.0" text="If you make a line of 3 X’s or O’s you win." />
+      <Label layoutX="37.0" layoutY="327.0" text="(The lines must be horizontal, vertical, or diagonal)" />
+      <Label layoutX="41.0" layoutY="345.0" text="A score of which character wins will be placed on the side bar." />
+      <Label layoutX="41.0" layoutY="295.0" text="The player will interchange after each click." />
    </children>
 </AnchorPane>

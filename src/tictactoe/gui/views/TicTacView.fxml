@@ -93,6 +93,11 @@
                   <Insets bottom="3.0" />
                </HBox.margin></ChoiceBox>
             <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <Button fx:id="backButton" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#takesYouBack" text="Back" textAlignment="RIGHT">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
             <Button fx:id="btnNewGame" mnemonicParsing="false" onAction="#handleNewGame" text="New Game" />
          </children>
       </HBox>
